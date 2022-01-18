@@ -2,8 +2,8 @@ library(tidyverse)
 library(fastDummies)
 
 ## data reading
-data_nla <- read.csv('../NLA2012_data.csv')
-data_mdl_output <- read.csv('../NLAmodel_output.csv')
+data_nla <- read.csv('../data/NLA2012_data.csv')
+data_mdl_output <- read.csv('../NLAmodel/NLAmodel_output.csv')
 data_global <- read.csv('./global results/global_data_clean.csv')
 
 ## data cleaning

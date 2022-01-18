@@ -1,9 +1,9 @@
 library(tidyverse)
 
-data_nla <- read.csv('../NLA2012_data.csv')
-data_mdl_output <- read.csv('../NLAmodel_output.csv')
+data_nla <- read.csv('../data/NLA2012_data.csv')
+data_mdl_output <- read.csv('../NLAmodel/NLAmodel_output.csv')
 data_fit <- cbind(data_nla, data_mdl_output)
-data_pred <- read.csv('../HydroLAKES_data.csv', na.strings=c("#N/A"))
+data_pred <- read.csv('../data/Global_data.csv', na.strings=c("#N/A"))
 data_fit <- drop_na(data_fit)
 data_pred <- drop_na(data_pred)
 cols <- c('ID', 'Chla', 'Depth', 'Area', 'WRT', 'Vol', 'T')
