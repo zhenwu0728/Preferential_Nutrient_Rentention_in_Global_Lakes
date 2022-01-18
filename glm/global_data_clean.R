@@ -37,33 +37,5 @@ data_trans_pred$Vol <- data_trans_pred$Vol * 1e6
 data_trans_pred <- rbind(data_trans_fit[c(cols, "TI", "TrophicIndex")],
                          data_trans_pred[c(cols, "TI", "TrophicIndex")])
 
-density_plot <- function(col_name, xlabel, trans=TRUE){
-  if (trans){
-    scale <- "log10"
-  } else {
-    scale <- "identity"
-  }
-  f <- ggplot()+
-    geom_density(aes(data_trans_fit[[col_name]], fill="NLA2012"),
-                 alpha=0.3)+
-    geom_density(aes(data_trans_pred[[col_name]], fill="Global"),
-                 alpha=0.3)+
-    scale_x_continuous(trans=scale, name=xlabel)+
-    scale_fill_manual("",values=c("#FB882C","#5B88A0"))+
-    theme_bw()+
-    theme(legend.position = c(0.9, 0.85),
-          legend.background = element_blank())+
-    ggsave(paste("./dist plots/", xlabel, ".png", sep = ""),
-           width = 8, height = 5, dpi = 800)
-}
-
-# density plot
-p1 <- density_plot("T", "Surface Water Temperature", FALSE)
-p2 <- density_plot("Depth", "Lake Depth")
-p3 <- density_plot("Area", "Lake Area")
-p4 <- density_plot("WRT", "Water Residence Time")
-p5 <- density_plot("Vol", "Lake Volume")
-p6 <- density_plot("Chla", "Chlorophyll-a")
-
 # export data for further analysis
-write.csv(data_trans_pred, './combined data/global_data_clean.csv')
+write.csv(data_trans_pred, './global results/global_data_clean.csv')
