@@ -17,3 +17,4 @@ This repo contains the data and code used in the paper "Preferential Phosphorus 
 `glm_N.R` and `glm_P.R` are code for GLM models to  relate EN and DE of N and P with multiple explanatory variables including water residential time, surface water temperature, water depth, area and trophic index. Statistics are generated in the folder `fitting statistics/`. Then cleaned global data is used to predict the EN and DE of N and P of the global lakes and placed in the folder `global results/`, namely `global_N.csv` and `global_P.csv` respectively.
 
 ## 4. Global Up-scaling
+`upscaling.ipynb` contains the code for Monte Carlo approach to predict the internal nutrient cycling fluxes of global lakes from the distribution of the nutrient budget model results.
