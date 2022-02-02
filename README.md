@@ -1,4 +1,7 @@
 # Preferential_Nutrient_Rentention_in_Global_Lakes
+
+[![DOI](https://zenodo.org/badge/448679643.svg)](https://zenodo.org/badge/latestdoi/448679643)
+
 This repo contains the data and code used in the paper "Preferential Phosphorus Retention in Lakes Exacerbates the Imbalance of Global Nutrient Cycles"
 
 ## 1. Data
